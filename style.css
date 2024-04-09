@@ -1,0 +1,74 @@
+:root {
+    --primary: #5e5a5a;
+    --text-color: #333;
+    --bg-color: #f8f8f8;
+    --bg-alt-color: #b2a4a49a;
+    --border-radius: 10px;
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: background-color .3s;
+    display: flex;
+    justify-content: center;
+}
+
+
+h5 {
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--bg-alt-color);
+    border-radius: var(--border-radius);
+    
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+}
+
+.btn {    
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: none;
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+    
+.btn:hover {
+    background-color: rgba(150, 150, 150, 0.7);
+    box-shadow: 0 0 0.5rem rgba(150, 150, 150, 0.7);
+    text-shadow: 0 0 0.5rem rgba(150, 150, 150, 0.7);
+}
+
+.bi-volume-up-fill{
+    margin-left: 0.5vh;
+}
+
+.bi-volume-down-fill{
+    margin-right: 0.5vh;
+}
+
+
+
+/* Progress bar */
+::-webkit-progress-value { background-color: var(--primary); }
+::-moz-progress-bar { background-color: var(--primary); }
+progress::-webkit-progress-bar { background-color: var(--bg-color); }
+progress::-moz-progress-bar { background-color: var(--bg-color); }
+
+/* Volume bar */
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; }
+input[type="range"]::-webkit-slider-runnable-track { background-color: var(--bg-alt-color); }
+input[type="range"]::-moz-range-thumb { background-color: var(--primary); }
+input[type="range"]::-moz-range-track { background-color: var(--bg-alt-color); }
+
+    
+
