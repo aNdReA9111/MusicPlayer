@@ -1,5 +1,5 @@
 # MusicPlayer
-Questo music player, sviluppato per un progetto di Tecnologie Web dell'università di Bologna, supporta la riproduzione tracce prese dalla cartella `Example` e di cui ne vengono date le specifiche all'interno del file `main.js` nell'apposito array
+Questo music player, sviluppato per un progetto di Tecnologie Web dell'università di Bologna, supporta la riproduzione di tracce prese dalla cartella `Example` e di cui ne vengono date le specifiche all'interno del file `main.js` nell'apposito array
 
 ## Pages
 Link per visionare la pagina da github pages:
