@@ -4,7 +4,7 @@ Questo music player, sviluppato per un progetto di Tecnologie Web dell'universit
 ## Pages
 Link per visionare la pagina da github pages:
 ```sh
-    https://andrea9111.github.io/MusicPlayer/music.html
+https://andrea9111.github.io/MusicPlayer/music.html
 ```
 
 ## Funzioni principali
