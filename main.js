@@ -62,23 +62,29 @@ function reset() {
 }
 
 function loadTrack(track_index) {
+    
+    //reset timer
     reset();
     
-    // Load a new track
+    // Carico la nuova traccia audio
     audio.src = track_list[track_index].path;
     audio.load();
     
-    // Update details of the track
+    // creo span da inserire nelle info
     imgAlbum.src = track_list[track_index].image;
     const trackInfoName = document.createElement('span');
     trackInfoName.textContent = track_list[track_index].name;
     const trackInfoArtist = document.createElement('span');
     trackInfoArtist.textContent = `${track_list[track_index].artist}`;
+    
+    // aggiungo info del brano
     trackInfo.textContent = '';
     trackInfo.appendChild(trackInfoName);
     trackInfo.appendChild(document.createElement('br'));
     trackInfo.appendChild(trackInfoArtist);
     const bgColor = track_list[track_index].bg;
+
+    // Setto background color andando a scomporre i valori rgba e settandoli manualmente
     const rgbaValues = bgColor.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)/);
     if (rgbaValues) {
         const r = parseInt(rgbaValues[1]);
@@ -87,11 +93,8 @@ function loadTrack(track_index) {
         const a = parseFloat(rgbaValues[4]);
         document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
     }
-    document.body.style.backgroundColor = track_list[track_index].bg;
 
     audio.addEventListener("ended", nextFunc);
-
-    
 }
 
 // Play/Pause toggle function
@@ -150,7 +153,6 @@ function repeatFunc(){
         document.getElementById('repeat').style.color = "#333";
     else
         document.getElementById('repeat').style.color = "lime";
-
 
     repeat = !repeat;
 }
